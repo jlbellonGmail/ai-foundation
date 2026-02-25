@@ -15,6 +15,7 @@ El objetivo es tener el sitio web funcional con la estructura básica y UN servi
 
 * **Criterio de Invalidación del MVP:**  
   - Si tras X sesiones no se alcanza el umbral de éxito, el servicio se considera no validado y se itera o descarta.
+  - Valor inicial de referencia: X = 200 sesiones calificadas de demo
 
 * **Validación de Feasibilidad de Datos:** El agente debe auditar que los archivos de contexto corporativo son suficientes para alimentar la IA antes de iniciar la codificación del chatbot.  
 * **Límite Cognitivo del Agente (Scope Guardrail):**  
@@ -62,7 +63,7 @@ graph TD
 * **Módulo GI de Gestión de Proyectos:** Panel interno para seguimiento de tareas técnicas y sprints integrados con agentes de desarrollo.  
 * **Módulo GI Comercial/CRM Básico:** Registro automatizado de leads y centralización de interacciones de preventa capturadas por el agente de IA.  
 * **Capa de Percepción y Memoria:** Configuración de una base de datos vectorial (Supabase \+ pgvector) que actúe como memoria de largo plazo para el Playground.  
-* **Marketplace & Pagos:** Arquitectura **Stripe Connect** donde GI actúa como plataforma central. Se utilizarán **Destination Charges** para retener comisiones por transacciones de servicios.  
+* **Marketplace & Pagos (Arquitectura únicamente):** Definición estructural inicial con **Stripe Connect** en modo stub/sandbox, sin flujos transaccionales activos.  
 
 ## **3\. Lo que NO se incluirá (Out-of-Scope)**
 
@@ -130,11 +131,11 @@ Cada misión del agente debe seguir este script de inicialización:
   * Tasa de finalización de flujos de contacto sin intervención humana.
   * Generación automática de informe de riesgos técnicos y éticos (ISO 42001).
   
-## (agregado) KPI Primario del MVP
+## KPI Primario del MVP
 
-- (agregado) El KPI primario del MVP es la **conversión Demo → Contacto**.
-- (agregado) Todas las demás métricas (OQ, precisión, feedback) actúan como **indicadores de soporte** para explicar este resultado.
-- (agregado) Ninguna optimización secundaria justifica mejoras si no impacta positivamente en el KPI primario.
+- El KPI primario del MVP es la **conversión Demo → Contacto**.
+- Todas las demás métricas (OQ, precisión, feedback) actúan como **indicadores de soporte** para explicar este resultado.
+- Ninguna optimización secundaria justifica mejoras si no impacta positivamente en el KPI primario.
 
 
 * **Decisión de Continuidad del MVP:**  
@@ -195,14 +196,15 @@ El MVP se considera completo únicamente si:
 - Las mejoras se limitarán a ajustes de UX, performance o claridad del valor.
 - Toda nueva idea será documentada para fases posteriores, sin alterar el alcance actual.
 
-## 11\. (agregado) Aclaración de Alcance Funcional del MVP
+## 11\. Aclaración de Alcance Funcional del MVP
 
-- (agregado) Los módulos de Marketplace, Pagos, CRM y Comisión se incluyen únicamente a nivel **arquitectural y estructural**.
-- (agregado) Durante el MVP estos módulos permanecen **desactivados funcionalmente**.
-- (agregado) El único servicio activo para validación de valor es la **Demo de IA (Playground)**.
+- Los módulos de Marketplace, Pagos, CRM y Comisión se incluyen únicamente a nivel **arquitectural y estructural**.
+- Durante el MVP estos módulos permanecen **desactivados funcionalmente**.
+- El único servicio activo para validación de valor es la **Demo de IA (Playground)**.
 
-## 12\. (agregado) Jerarquía de Criterios de Finalización
+## 12\. Jerarquía de Criterios de Finalización
 
-- (agregado) La sección **“Definición de Terminado (Done)”** aplica a nivel **tarea / sprint / misión agéntica**.
-- (agregado) La sección **“Definition of Done del MVP”** aplica exclusivamente al **cierre completo de la Fase MVP**.
-- (agregado) En caso de conflicto, prevalece la **Definition of Done del MVP**.
+- La sección **“Definición de Terminado (Done)”** aplica a nivel **tarea / sprint / misión agéntica**.
+- La sección **“Definition of Done del MVP”** aplica exclusivamente al **cierre completo de la Fase MVP**.
+- En caso de conflicto, prevalece la **Definition of Done del MVP**.
+- La Definition of Done del MVP tiene prioridad absoluta sobre cualquier criterio de Done parcial o técnico.

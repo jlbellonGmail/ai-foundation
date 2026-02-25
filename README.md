@@ -1,11 +1,33 @@
-# Nombre del Proyecto
+# Nombre del proyecto
 
-**Cada sección debe responder:**
-- qué es
+**Propósito del README**
+
+Este documento define el marco conceptual del proyecto.
+Cada sección responde explícitamente a:
+- qué es el sistema
 - por qué existe
-- cómo se usa
+- cómo se utiliza o evoluciona
 
-Si no responde eso → sobra o falta contenido.
+Si una sección no cumple alguno de estos puntos, debe revisarse o eliminarse.
+
+---
+
+## Flujo de Trabajo y Calidad
+
+El proyecto utiliza GitHub Actions como sistema de control de calidad.
+Actualmente se define un pipeline base orientado a establecer disciplina
+de trabajo y buenas prácticas.
+
+Los controles de testing, linting, build y despliegue serán incorporados
+progresivamente a medida que se defina el stack técnico y el producto
+avance hacia su MVP.
+
+El objetivo es garantizar:
+- coherencia técnica
+- trazabilidad de cambios
+- estabilidad evolutiva del sistema
+
+---
 
 ## Descripción Ejecutiva
 Resumen claro y breve del sistema y su propósito.
@@ -38,7 +60,36 @@ Cómo se desarrolla, prueba y documenta el proyecto.
 Cómo participan los agentes, límites y reglas.
 
 ## Sistema de Ayuda y Documentación
-Cómo funciona la ayuda contextual y la wiki viva.
+
+Este proyecto implementa un **Sistema de Ayuda y Documentación Viva**, diseñado para escalar junto con el producto y ser consumido tanto por usuarios humanos como por agentes de IA.
+
+El sistema se rige por los siguientes principios:
+- Toda funcionalidad visible debe contar con ayuda asociada.
+- La ayuda debe ser accesible desde la UI, sin salir del producto.
+- La documentación técnica y funcional se versiona junto con el código.
+- Ninguna feature puede considerarse completa sin su documentación correspondiente.
+
+### Punto de Entrada Único
+
+El índice central del sistema de ayuda se encuentra en:
+
+📄 **`docs/help_index.md`**
+
+Este archivo define:
+- Qué tipo de documentación existe.
+- Dónde vive cada tipo de ayuda.
+- Qué documentación corresponde a usuarios, desarrolladores y agentes.
+- Cómo debe mantenerse la coherencia documental del proyecto.
+
+### Documentación Estratégica Relacionada
+
+El sistema de ayuda se apoya y complementa con:
+- `docs/explanation/HELP_SYSTEM.md` – Contrato del sistema de ayuda.
+- `docs/explanation/PRD.md` – Qué debe ser el producto.
+- `docs/explanation/MVP.md` – Alcance mínimo validado.
+
+📌 **Regla clave:**  
+Si una funcionalidad no puede ser explicada correctamente mediante este sistema de ayuda, entonces no está lista para producción.
 
 ## Testing y Calidad
 Estrategia de testing y estándares mínimos.

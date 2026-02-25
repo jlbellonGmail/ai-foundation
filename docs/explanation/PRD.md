@@ -99,6 +99,9 @@ AI-PROJECT-FOUNDATION
 
 ### 2.1. Gestión de Versiones y Flujo de Trabajo (Git Workflow)
 
+**Nota**: GitFlow se aplica al proyecto derivado.
+La plantilla AI-PROJECT-FOUNDATION evoluciona únicamente mediante tags versionados.
+
 * **Metodología**: El proyecto se rige bajo GitFlow. Toda nueva funcionalidad debe nacer en una rama feature/, integrarse en develop para pruebas y solo llegar a main tras validación.
 
 * **Trazabilidad**: Cada commit debe estar vinculado a un requerimiento del PRD, garantizando que el historial de Git actúe como una auditoría técnica de la evolución del sistema.
@@ -136,14 +139,13 @@ AI-PROJECT-FOUNDATION
 ### **5.1. Secciones Principales**
 
 * **Home:** Propuesta de valor clara con estética "Modern SaaS" (Stripe/Vercel style).  
-  * **Estética Avanzada:** Uso de grids de estilo *Bento*, *Glassmorphism* y micro-animaciones que refuercen la identidad tecnológica. 
+* **Estética Avanzada:** Uso de grids de estilo *Bento*, *Glassmorphism* y micro-animaciones vía Framer Motion para denotar "tecnología activa" que refuercen la identidad tecnológica. 
 * **Servicios:** Consultoría, desarrollo a medida e integración de LLMs.  
 * **Productos:** Catálogo de soluciones pre-configuradas.  
 * **IA Playground:** Una zona interactiva donde los clientes puedan probar agentes de IA especializados (ej. analizador de documentos, optimizador de prompts).  
 * **Centro de Autoridad (Blog/Citas):** Artículos técnicos estructurados para Answer Engine según AEO sitdo en visión general, con esquemas FAQ.
 formato pregunta‑respuesta, micro‑resúmenes y marcado schema.org (FAQ / HowTo) para citabilidad en motores de respuesta .
 * **Playground Sandbox :** Versión demo sin credenciales con datos sintéticos y límites operativos; versión avanzada para leads calificados.
-*  Estética Avanzada: Uso de grids de estilo Bento, Glassmorphism y micro-animaciones vía Framer Motion para denotar "tecnología activa".
 *  Centro de Documentación: Ubicado en /docs/explanation/ (según estructura ideal) para educar al cliente sobre nuestra metodología.
 
 ### **5.2. Estándar de Interfaz para Grillas de Datos (UX)**
@@ -171,8 +173,7 @@ Todas las tablas de datos, listas de leads o paneles de administración deben cu
 Botones persistentes para Exportar a Excel y Emitir PDF basados estrictamente en los datos visualizados (respetando filtros y orden actual).
 ```
 
-
-### **5.2. IA Playground / Capacidades de IA**
+### **5.3. IA Playground / Capacidades de IA**
 
 * **Arquitectura de Memoria:** Los agentes del Playground deben ser capaces de recordar el contexto de la sesión actual para guiar al usuario en el embudo de ventas.  
 
@@ -187,23 +188,23 @@ Botones persistentes para Exportar a Excel y Emitir PDF basados estrictamente en
 ## **6\. Requisitos No Funcionales**
 
 * **Rendimiento:** Carga inicial \< 1.5s.  
-  * **Métrica Crítica:** LCP (Largest Contentful Paint) inferior a 1.2 segundos para maximizar la retención.  
+* **Métrica Crítica:** LCP (Largest Contentful Paint) inferior a 1.2 segundos para maximizar la retención.  
 * **SEO:** Según el enfoque AEO definido en visión general.  
 * **Seguridad:** Manejo seguro de API Keys y datos de usuario.  
-  * **Protección de Inyección:** Implementar guardrails automáticos contra ataques de *prompt injection* en todas las interfaces de IA pública.  
+* **Protección de Inyección:** Implementar guardrails automáticos contra ataques de *prompt injection* en todas las interfaces de IA pública.  
 * **Accesibilidad WCAG 2.1:** Garantizar que las herramientas de IA sean utilizables por personas con discapacidades visuales.
 * **Política de Retención de Logs :** Retención por defecto de 30 días con posibilidad de extensión auditada.
 *  Métricas de Experiencia (CWV): LCP (Largest Contentful Paint) inferior a 1.2 segundos e INP (Interaction to Next Paint) < 200ms.
 *  Protección Agéntica: Implementar guardrails contra ataques de prompt injection y logs de razonamiento trazables para auditoría legal.
 
-
-
 ## **7\. Stack Tecnológico Sugerido**
 
+El stack tecnológico aquí descrito es una referencia recomendada y podrá ajustarse sin alterar los objetivos funcionales del PRD.
+
 * **Frontend:** Next.js 15+ (App Router), Tailwind CSS 4\.  
-  * **Biblioteca de UI:** shadcn/ui para asegurar componentes consistentes que el agente pueda replicar sin errores visuales.  
+* **Biblioteca de UI:** shadcn/ui para asegurar componentes consistentes que el agente pueda replicar sin errores visuales.  
 * **Backend/DB:** Supabase (PostgreSQL \+ pgvector).  
-  * **IA-Native DB:** Uso de búsqueda vectorial para alimentar el Playground con nuestra propia base de conocimientos.  
+* **IA-Native DB:** Uso de búsqueda vectorial para alimentar el Playground con nuestra propia base de conocimientos.  
 * **IA:** Vercel AI SDK, OpenAI/Anthropic/Google APIs.  
 * **Diseño Agéntico:** Integración de Stitch MCP para que los agentes generen assets visuales (iconos, fondos) coherentes con la marca en tiempo real.
 keys con rotación automática y control por roles .
@@ -340,3 +341,5 @@ Una funcionalidad se considera completa únicamente si:
 - Ninguna modificación al PRD puede realizarse durante la Fase MVP.
 - Cambios estratégicos se documentarán como PRD v2 para fases posteriores.
 
+Fecha de congelamiento PRD v1: __ / __ / 2026
+Responsable de aprobación: __________________
