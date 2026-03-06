@@ -61,13 +61,42 @@ Cómo participan los agentes, límites y reglas.
 
 ## Sistema de Ayuda y Documentación
 
-Este proyecto implementa un **Sistema de Ayuda y Documentación Viva**, diseñado para escalar junto con el producto y ser consumido tanto por usuarios humanos como por agentes de IA.
+Este proyecto implementa un **Sistema de Ayuda y Documentación Viva**, diseñado para
+escalar junto con el producto y ser consumido tanto por usuarios humanos como por
+agentes de IA.
 
-El sistema se rige por los siguientes principios:
+La documentación forma parte de la arquitectura del sistema y se rige por los
+siguientes principios obligatorios:
+
 - Toda funcionalidad visible debe contar con ayuda asociada.
 - La ayuda debe ser accesible desde la UI, sin salir del producto.
 - La documentación técnica y funcional se versiona junto con el código.
 - Ninguna feature puede considerarse completa sin su documentación correspondiente.
+
+### Componentes del sistema de ayuda
+
+El sistema se organiza en los siguientes documentos y carpetas clave:
+
+- 📘 **Índice general de ayuda**  
+  Punto de entrada único para toda la ayuda funcional y técnica.  
+  Ver [`docs/help_index.md`](docs/help_index.md)
+
+- 🧠 **Definición del sistema de ayuda y reglas de documentación**  
+  Establece cómo debe crearse, mantenerse y versionarse la ayuda.  
+  Ver [`docs/explanation/HELP_SYSTEM.md`](docs/explanation/HELP_SYSTEM.md)
+
+- 🏛️ **Gobernanza de agentes de IA**  
+  Define límites, responsabilidades y reglas de operación de los agentes.  
+  Ver [`docs/explanation/AGENT_GOVERNANCE.md`](docs/explanation/AGENT_GOVERNANCE.md)
+
+- 🧩 **Sistema de Skills (habilidades reutilizables)**  
+  Describe las habilidades que los agentes pueden utilizar y sus restricciones.  
+  Ver [`docs/skills/README.md`](docs/skills/README.md)
+
+Este sistema garantiza que el conocimiento del producto:
+- no quede disperso,
+- no dependa de personas,
+- y evolucione de forma controlada junto con el código.
 
 ### Punto de Entrada Único
 

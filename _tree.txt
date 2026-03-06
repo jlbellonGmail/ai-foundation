@@ -1,0 +1,95 @@
+Listado de rutas de carpetas para el volumen Datos
+El número de serie del volumen es 606C-0F44
+D:.
+|   .cursorrules.md
+|   AGENTS.md
+|   antigravity.rules.md
+|   CHANGELOG.md
+|   README.md
+|   _LEER!!!
+|   _tree.txt
+|   
++---.agent
+|   +---rules
+|   |       ui-style.md
+|   |       
+|   \---workflows
++---.antigravity
++---docs
+|   |   help_index.md
+|   |   
+|   +---agents
+|   |       antigravity.rules.md
+|   |       
+|   +---artifacts
+|   +---assets
+|   +---explanation
+|   |       AGENT_GOVERNANCE.md
+|   |       HELP_SYSTEM.md
+|   |       MVP.md
+|   |       PRD.md
+|   |       
+|   +---reference
+|   |       CHECKLIST_INICIALIZACION_PROYECTOS_IA.md
+|   |       RECOVERY_SOP.md
+|   |       
+|   +---skills
+|   |   |   catalog.md
+|   |   |   external_sources.md
+|   |   |   policies.md
+|   |   |   README.md
+|   |   |   roadmap.md
+|   |   |   
+|   |   \---sources
+|   |           frontend-design.md
+|   |           marketing.md
+|   |           superpowers.md
+|   |           
+|   +---templates
+|   |       ISSUE_TEMPLATE.md
+|   |       PULL_REQUEST_TEMPLATE.md
+|   |       
+|   \---tutorials
+|       +---dev_help
+|       |       form_ejemplo.md
+|       |       
+|       \---ui_help
+|               form_ejemplo.md
+|               
++---prompts
+|   |   README.md
+|   |   
+|   +---domain
+|   |       domain_context.md
+|   |       
+|   +---guardrails
+|   |       prompt_injection.md
+|   |       
+|   \---system
+|           agent_behavior.md
+|           project_start.md
+|           
++---src
+|   +---application
+|   |   \---use-cases
+|   +---domain
+|   |   |   AGENTS.md
+|   |   |   
+|   |   +---models
+|   |   \---services
+|   +---infrastructure
+|   |   |   AGENTS.md
+|   |   |   
+|   |   +---api
+|   |   +---db
+|   |   \---external
+|   \---modules
++---supabase
+|   |   seed.sql
+|   |   
+|   \---migrations
+|           AGENTS.md
+|           
+\---test
+        TEST_STYLE.md
+        

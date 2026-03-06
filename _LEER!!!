@@ -1,0 +1,38 @@
+# Prompt start
+Lee prompts/system/project_start.md
+y ejecuta el proceso de inicialización del agente.
+
+# Proyecto nuevo sincronizado con plantilla (INTERESANTEEE!!!)
+
+## Knowledge Repo (la arquitectura más limpia)
+
+Crear repo nuevo:
+
+```
+ai-knowledge
+
+```
+Contendría:
+ai-knowledge
+│
+├─ skills
+├─ prompts
+├─ agents
+└─ frameworks
+```
+Y los proyectos usan esto.
+
+Arquitectura:
+
+```
+ai-project-foundation
+        │
+        │ template
+        ▼
+   GI Platform
+        │
+        └── usa → ai-knowledge
+```
+
+**Esto exigirlo luego, no quiero esperar a tener 4 proyecto para implementar esto.
+Lo quiero tener desde el vamos**
