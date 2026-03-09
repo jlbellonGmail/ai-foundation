@@ -1,73 +1,284 @@
-# Manual de Misión: Consultor de IA
+# AGENTS.md — AI Project Foundation
 
-## **Objetivo:** 
+Este archivo define cómo deben operar los agentes de inteligencia artificial dentro de este repositorio.
 
-Crear un puente de confianza para clientes B2B mediante demos de alto impacto.
+Su objetivo es asegurar que los agentes:
 
-## **KPI de Diseño:** 
+- comprendan el propósito del framework
+- respeten la arquitectura del sistema
+- utilicen correctamente la documentación
+- colaboren siguiendo workflows definidos
+- mantengan coherencia técnica
 
-El usuario debe percibir una interfaz de vanguardia (Glassmorphism) que justifique la inversión en tecnología.
+---
 
-## **Regla de Oro:** 
+# 1. Propósito del Repositorio
 
-Priorizar siempre la demostrabilidad de ROI en menos de 2 minutos.
+AI Project Foundation es un **framework para construir proyectos diseñados para colaborar con agentes de inteligencia artificial**.
 
-## **Identidad y Rol**
+El framework define:
 
-Eres un Ingeniero Líder de IA Full-Stack operando en Antigravity. Tu misión es construir, mantener y evolucionar la plataforma de nuestra agencia de servicios de IA, asegurando que cada línea de código refleje autoridad técnica y excelencia funcional.
+- estructura de proyectos
+- sistema de roles de agentes
+- workflows de desarrollo
+- pipelines de entrega
+- gobernanza de IA
+- sistema de prompts
+- estructura documental
 
-## **Contexto del Proyecto** 
+Este repositorio **no contiene aplicaciones productivas**.
 
-**Empresa**: Agencia líder en consultoría y soluciones de IA B2B.
+Las aplicaciones se crean utilizando el repositorio:
 
-**Objetivo**: Transformar la complejidad de la IA en resultados operativos para clientes.
+ai-project-template
 
-**Stack Maestro**: Next.js 15+ (App Router), Tailwind CSS 4, Supabase (RLS Pool Model), Vercel AI SDK.
+---
 
-## **Protocolos de Misión (SOPs)**
+# 2. Ecosistema de Repositorios
 
-**Inicialización (Slice Start)**
+El framework forma parte de un ecosistema compuesto por tres repositorios principales.
 
-1. Antes de codificar, lee @PRD.md y @MVP.md para entender el alcance actual.
-2. Genera un Implementation Plan (Artifact) con el resumen de cambios.
-3. Espera aprobación humana antes de modificar archivos en src/.
+## ai-knowledge
 
-**Ejecución (The Vibe Loop)**
+Base de conocimiento compartida.
 
-1. **Modularidad**: Separa lógica pura (domain/) de infraestructura (infrastructure/).
-2. **Seguridad**: Verifica que toda tabla en Supabase tenga RLS activo.
-3. **Validación**: Usa el Browser Tool para grabar un Walkthrough de la UI terminada.1
+Contiene:
 
-## **Comandos de Supervivencia**
+- skills reutilizables
+- prácticas de desarrollo
+- estándares técnicos
+- prompts reutilizables
+- patrones de arquitectura
 
-* pnpm dev: Iniciar entorno local.
-* pnpm typecheck: Validar integridad de TypeScript.
-* antigravity checkpoint create --label "LABEL": Guardar estado estable.
-  
-## **Reglas de Comunicación**
-* Sé conciso. No expliques qué es una función a menos que se te pida.
-* Si detectas una ambigüedad en el @PRD.md, detente y lanza una "Socratic Question".
+---
 
-## Directiva de Herencia
+## ai-project-foundation
 
-Directiva de Contexto: Antes de operar en cualquier subdirectorio, el agente debe buscar un archivo AGENTS.md local. Las reglas locales sobrescriben las reglas globales para ese ámbito específico.
+Framework que define cómo estructurar proyectos colaborativos con IA.
 
-## Resolución de Conflictos de Fuente
+Incluye:
 
-Orden de prioridad en caso de conflicto:
+- sistema de roles
+- workflows
+- pipelines
+- gobernanza
+- estructura documental
+
+---
+
+## ai-project-template
+
+Plantilla base para crear nuevos proyectos utilizando el framework.
+
+---
+
+# 3. Lectura Obligatoria para Agentes
+
+Antes de realizar cambios en el repositorio, los agentes deben revisar:
+
+README.md
+
+docs/explanation/AI_PROJECT_FOUNDATION.md
+
+docs/explanation/HELP_SYSTEM.md
+
+docs/skills/catalog.md
+
+docs/skills/policies.md
+
+.ai/context.md
+
+.antigravity/rules.md
+
+Estos documentos definen:
+
+- arquitectura del framework
+- sistema de ayuda
+- habilidades disponibles
+- políticas de calidad
+- gobernanza de agentes
+
+---
+
+# 4. Sistema de Roles de Agentes
+
+Los roles de agentes están definidos en:
+
+.ai-roles/
+
+Roles disponibles:
+
+Product Manager  
+Define requisitos y criterios de aceptación.
+
+Architect  
+Diseña la arquitectura del sistema.
+
+Developer  
+Implementa funcionalidades.
+
+Reviewer  
+Valida calidad técnica y consistencia.
+
+Documentation Agent  
+Mantiene la documentación y el sistema de ayuda.
+
+Cada rol tiene responsabilidades específicas y produce artefactos distintos.
+
+---
+
+# 5. Workflows de Agentes
+
+Los workflows describen cómo los agentes colaboran para desarrollar funcionalidades.
+
+Ubicación:
+
+.ai-workflows/
+
+Ejemplo:
+
+feature-development.md
+
+Un workflow define:
+
+- secuencia de agentes
+- responsabilidades
+- artefactos generados
+
+---
+
+# 6. Pipelines
+
+Los pipelines describen procesos completos de entrega.
+
+Ubicación:
+
+.ai-pipelines/
+
+Un pipeline conecta:
+
+requisitos → diseño → implementación → revisión → pruebas → documentación → integración.
+
+---
+
+# 7. Sistema de Prompts
+
+Los prompts oficiales del proyecto se encuentran en:
+
+prompts/
+
+Estructura:
+
+prompts/system/
+
+prompts/domain/
+
+prompts/guardrails/
+
+Prioridad de uso:
+
+1. system prompts
+2. domain prompts
+3. guardrails
+
+---
+
+# 8. Base de Conocimiento
+
+El conocimiento reutilizable del ecosistema se encuentra en:
+
+ai-knowledge
+
+Los agentes deben consultar esta base antes de proponer soluciones.
+
+El conocimiento incluye:
+
+- skills
+- prácticas de desarrollo
+- estándares
+- patrones arquitectónicos
+
+---
+
+# 9. Documentación
+
+La documentación del framework se encuentra en:
+
+docs/
+
+Tipos de documentación:
+
+explanation  
+Explicaciones conceptuales.
+
+reference  
+Guías de referencia.
+
+tutorials  
+Tutoriales prácticos.
+
+skills  
+Catálogo de habilidades para agentes.
+
+templates  
+Plantillas para issues y pull requests.
+
+---
+
+# 10. Reglas de Trabajo
+
+Los agentes deben seguir estos principios:
+
+1. No modificar la arquitectura del framework sin justificación.
+2. No introducir dependencias innecesarias.
+3. Mantener coherencia con la documentación oficial.
+4. Priorizar claridad, simplicidad y mantenibilidad.
+5. Documentar cualquier cambio significativo.
+
+---
+
+# 11. Seguridad
+
+Los agentes nunca deben:
+
+- incluir secretos en el repositorio
+- exponer claves o tokens
+- modificar configuraciones críticas sin aprobación humana
+
+---
+
+# 12. Resolución de Conflictos
+
+Si existen múltiples fuentes de información, la prioridad es:
+
 1. AGENTS.md local
-2. .cursorrules
-3. MVP.md
-4. PRD.md
+2. .antigravity/rules.md
+3. documentación en docs/
+4. prompts del sistema
 
-Ante conflicto no resoluble, detener ejecución y solicitar decisión humana.
+Si el conflicto persiste, el agente debe solicitar decisión humana.
 
-* **Mejora 1**: Mandato de "Pensar antes de Codificar": Fuerza al agente a generar siempre un Implementation Plan como Artifact antes de tocar cualquier archivo en src/. Esto activa el modo de planificación profunda de Antigravity.
-* **Mejora 2**: Protocolo de Preguntas Socráticas: Añade una instrucción que diga: "Si un requisito del @PRD.md es ambiguo, detente y lanza 3-5 preguntas críticas. No asumas lógica de negocio por cuenta propia".
-* **Mejora 3**: Verificación con Navegador: Incluye la orden obligatoria de usar el Browser Tool al finalizar cualquier cambio en la UI para grabar un Walkthrough de validación.
+---
 
-## Documentación 
+# 13. Flujo de Trabajo Recomendado
 
-Todo cambio funcional requiere actualización de la documentación de ayuda, nueva feature, hotfix, release o cambio funcional debe:
-- actualizar su ayuda correspondiente
-- crear o modificar al menos un archivo en docs/ correspondiente, Si no existe, debe crearse.
+Cuando un agente recibe una tarea:
+
+1. Leer documentación relevante.
+2. Analizar el problema.
+3. Proponer solución.
+4. Evaluar impacto.
+5. Implementar cambios.
+6. Actualizar documentación.
+
+---
+
+# 14. Objetivo Final
+
+El objetivo de los agentes es contribuir a mantener un framework que permita construir proyectos:
+
+- mantenibles
+- bien documentados
+- seguros
+- colaborativos entre humanos e IA.
+    

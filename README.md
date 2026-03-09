@@ -1,9 +1,83 @@
-# Nombre del proyecto
+# AI Project Foundation
 
-**Propósito del README**
+Framework para construir proyectos de software diseñados para colaborar con agentes de inteligencia artificial.
+
+Define:
+
+- arquitectura del proyecto
+- sistema de prompts
+- modelo de agentes
+- workflows de desarrollo
+- gobernanza de IA
+- estructura documental
+
+Este framework permite crear proyectos mantenibles, documentados y comprensibles tanto por humanos como por IA.
+
+---
+
+# Ecosistema del Framework
+
+AI Project Foundation forma parte de un ecosistema de repositorios diseñados para facilitar el desarrollo de proyectos **AI-native**.
+
+El flujo del ecosistema es el siguiente:
+
+```
+ai-knowledge
+     ↓
+ai-project-foundation
+     ↓
+ai-project-template
+     ↓
+AI-native projects
+``` 
+
+
+### ai-knowledge
+Base de conocimiento compartida del ecosistema.
+
+Contiene:
+
+- skills reutilizables
+- estándares técnicos
+- prompts compartidos
+- prácticas de desarrollo
+- patrones de arquitectura
+
+### ai-project-foundation
+
+Este repositorio.
+
+Define el framework que estructura proyectos colaborativos con IA:
+
+- roles de agentes
+- workflows
+- pipelines
+- gobernanza
+- sistema documental
+
+### ai-project-template
+
+Plantilla base para iniciar nuevos proyectos utilizando el framework.
+
+Incluye:
+
+- estructura inicial del proyecto
+- integración con foundation
+- configuración inicial de agentes
+- sistema de documentación
+
+### AI-native projects
+
+Proyectos reales construidos utilizando el template y el framework.
+
+---
+
+# Propósito del README
 
 Este documento define el marco conceptual del proyecto.
+
 Cada sección responde explícitamente a:
+
 - qué es el sistema
 - por qué existe
 - cómo se utiliza o evoluciona
@@ -12,128 +86,223 @@ Si una sección no cumple alguno de estos puntos, debe revisarse o eliminarse.
 
 ---
 
-## Flujo de Trabajo y Calidad
+# Descripción Ejecutiva
 
-El proyecto utiliza GitHub Actions como sistema de control de calidad.
-Actualmente se define un pipeline base orientado a establecer disciplina
-de trabajo y buenas prácticas.
+AI Project Foundation es un framework diseñado para facilitar la creación de proyectos de software que colaboran de manera efectiva con agentes de inteligencia artificial.
 
-Los controles de testing, linting, build y despliegue serán incorporados
-progresivamente a medida que se defina el stack técnico y el producto
-avance hacia su MVP.
-
-El objetivo es garantizar:
-- coherencia técnica
-- trazabilidad de cambios
-- estabilidad evolutiva del sistema
+Proporciona una estructura clara que permite que humanos y agentes trabajen sobre el mismo sistema sin generar caos estructural.
 
 ---
 
-## Descripción Ejecutiva
-Resumen claro y breve del sistema y su propósito.
+# Problema que Resuelve
 
-## Problema que Resuelve
-Qué problema real aborda el proyecto.
+Los proyectos que utilizan IA suelen enfrentar varios problemas:
 
-## Objetivo del Sistema
-Qué busca lograr el producto a nivel funcional y estratégico.
+- documentación inconsistente
+- arquitectura difícil de comprender para agentes
+- prompts desorganizados
+- falta de gobernanza para agentes
 
-## Alcance Funcional
-Qué incluye el sistema.
+Este framework introduce una estructura que resuelve estos problemas.
 
-## Fuera de Alcance
-Qué NO incluye explícitamente.
+---
 
-## Arquitectura General
-Descripción de la arquitectura (hexagonal, capas, principios).
+# Objetivo del Sistema
 
-## Principios de Diseño
-Reglas que gobiernan decisiones técnicas y de producto.
+El objetivo es permitir la construcción de proyectos que sean:
 
-## Estructura del Repositorio
-Explicación de carpetas clave y su propósito.
+- mantenibles
+- comprensibles por humanos
+- comprensibles por IA
+- bien documentados
+- estructuralmente coherentes
 
-## Flujo de Trabajo
-Cómo se desarrolla, prueba y documenta el proyecto.
+---
 
-## Uso de IA y Agentes
-Cómo participan los agentes, límites y reglas.
+# Alcance Funcional
 
-## Sistema de Ayuda y Documentación
+El framework define:
 
-Este proyecto implementa un **Sistema de Ayuda y Documentación Viva**, diseñado para
-escalar junto con el producto y ser consumido tanto por usuarios humanos como por
-agentes de IA.
+- estructura de repositorios
+- sistema de roles de agentes
+- workflows de desarrollo
+- pipelines de entrega
+- sistema de prompts
+- gobernanza de IA
+- arquitectura documental
 
-La documentación forma parte de la arquitectura del sistema y se rige por los
-siguientes principios obligatorios:
+---
+
+# Fuera de Alcance
+
+Este repositorio **no contiene aplicaciones productivas**.
+
+Las aplicaciones se crean utilizando:
+
+```
+ ai-project-template
+```
+
+
+---
+
+# Arquitectura General
+
+El framework promueve principios de arquitectura orientada a dominio:
+
+- separación de responsabilidades
+- modularidad
+- documentación viva
+- diseño mantenible
+- colaboración humano-IA
+
+---
+
+## Arquitectura Detallada
+
+Para una descripción completa de la arquitectura del framework ver:
+
+`ARCHITECTURE.md`
+
+# Principios de Diseño
+
+Las decisiones técnicas dentro del framework se rigen por los siguientes principios:
+
+- claridad estructural
+- mínima complejidad necesaria
+- documentación como parte del sistema
+- separación clara entre conocimiento, framework y proyectos
+- compatibilidad con agentes de IA
+
+---
+
+# Estructura del Repositorio
+
+```
+.ai
+.ai-pipelines
+.ai-roles
+.ai-workflows
+.antigravity
+prompts
+docs
+```
+
+### .ai
+Contexto e infraestructura para agentes.
+
+### .ai-roles
+Definición de roles de agentes.
+
+### .ai-workflows
+Flujos de trabajo entre agentes.
+
+### .ai-pipelines
+Procesos completos de entrega.
+
+### .antigravity
+Reglas de gobernanza para agentes.
+
+### prompts
+Sistema de prompts del framework.
+
+### docs
+Sistema completo de documentación.
+
+---
+
+# Flujo de Trabajo
+
+El desarrollo sigue un flujo estructurado basado en roles:
+
+1. Product Manager define requisitos
+2. Architect diseña la arquitectura
+3. Developer implementa
+4. Reviewer valida calidad
+5. Documentation Agent actualiza documentación
+
+---
+
+# Uso de IA y Agentes
+
+El framework permite que múltiples agentes colaboren en el desarrollo del proyecto.
+
+Los agentes:
+
+- siguen roles definidos
+- operan mediante workflows
+- respetan reglas de gobernanza
+- utilizan prompts controlados
+
+---
+
+# Sistema de Ayuda y Documentación
+
+Este proyecto implementa un **Sistema de Ayuda y Documentación Viva**, diseñado para escalar junto con el producto y ser consumido tanto por usuarios humanos como por agentes de IA.
+
+La documentación forma parte de la arquitectura del sistema y se rige por los siguientes principios:
 
 - Toda funcionalidad visible debe contar con ayuda asociada.
-- La ayuda debe ser accesible desde la UI, sin salir del producto.
-- La documentación técnica y funcional se versiona junto con el código.
-- Ninguna feature puede considerarse completa sin su documentación correspondiente.
+- La ayuda debe ser accesible desde la interfaz.
+- La documentación se versiona junto con el código.
+- Ninguna feature se considera completa sin documentación.
 
 ### Componentes del sistema de ayuda
 
-El sistema se organiza en los siguientes documentos y carpetas clave:
+📘 **Índice general de ayuda**  
+`docs/help_index.md`
 
-- 📘 **Índice general de ayuda**  
-  Punto de entrada único para toda la ayuda funcional y técnica.  
-  Ver [`docs/help_index.md`](docs/help_index.md)
+🧠 **Contrato del sistema de ayuda**  
+`docs/explanation/HELP_SYSTEM.md`
 
-- 🧠 **Definición del sistema de ayuda y reglas de documentación**  
-  Establece cómo debe crearse, mantenerse y versionarse la ayuda.  
-  Ver [`docs/explanation/HELP_SYSTEM.md`](docs/explanation/HELP_SYSTEM.md)
+🏛️ **Gobernanza de agentes**  
+`docs/explanation/AGENT_GOVERNANCE.md`
 
-- 🏛️ **Gobernanza de agentes de IA**  
-  Define límites, responsabilidades y reglas de operación de los agentes.  
-  Ver [`docs/explanation/AGENT_GOVERNANCE.md`](docs/explanation/AGENT_GOVERNANCE.md)
+🧩 **Sistema de Skills**  
+`docs/skills/README.md`
 
-- 🧩 **Sistema de Skills (habilidades reutilizables)**  
-  Describe las habilidades que los agentes pueden utilizar y sus restricciones.  
-  Ver [`docs/skills/README.md`](docs/skills/README.md)
+---
 
-Este sistema garantiza que el conocimiento del producto:
-- no quede disperso,
-- no dependa de personas,
-- y evolucione de forma controlada junto con el código.
+# Testing y Calidad
 
-### Punto de Entrada Único
+El framework promueve buenas prácticas de calidad:
 
-El índice central del sistema de ayuda se encuentra en:
+- testing automatizado
+- revisión de código
+- validación de arquitectura
+- documentación obligatoria
 
-📄 **`docs/help_index.md`**
+---
 
-Este archivo define:
-- Qué tipo de documentación existe.
-- Dónde vive cada tipo de ayuda.
-- Qué documentación corresponde a usuarios, desarrolladores y agentes.
-- Cómo debe mantenerse la coherencia documental del proyecto.
+# Seguridad y Datos
 
-### Documentación Estratégica Relacionada
+Los agentes no deben:
 
-El sistema de ayuda se apoya y complementa con:
-- `docs/explanation/HELP_SYSTEM.md` – Contrato del sistema de ayuda.
-- `docs/explanation/PRD.md` – Qué debe ser el producto.
-- `docs/explanation/MVP.md` – Alcance mínimo validado.
+- exponer claves
+- incluir secretos
+- modificar configuraciones críticas sin aprobación humana.
 
-📌 **Regla clave:**  
-Si una funcionalidad no puede ser explicada correctamente mediante este sistema de ayuda, entonces no está lista para producción.
+---
 
-## Testing y Calidad
-Estrategia de testing y estándares mínimos.
+# Contribución
 
-## Seguridad y Datos
-Cómo se protegen datos y accesos.
+Las contribuciones deben:
 
-## Instalación y Arranque
-Pasos básicos para iniciar el proyecto.
+- respetar la arquitectura del framework
+- incluir documentación
+- mantener coherencia estructural.
 
-## Contribución
-Cómo colaborar sin romper el sistema.
+---
 
-## Versionado
-Cómo se versiona el proyecto y la plantilla.
+# Versionado
 
-## Estado del Proyecto
-Estado actual (plantilla / en desarrollo / productivo).
+El framework sigue **Semantic Versioning**.
+
+La versión actual del framework se encuentra en el archivo:
+
+`VERSION`
+
+El historial de cambios puede consultarse en:
+
+`CHANGELOG.md`
+

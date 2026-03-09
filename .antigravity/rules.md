@@ -2,14 +2,14 @@
 
 Este archivo define las reglas operativas que deben seguir los agentes de IA que trabajan dentro de este repositorio.
 
-Su objetivo es garantizar que cualquier agente respete:
+El objetivo es garantizar que cualquier agente respete:
 
-* la arquitectura del proyecto
-* la documentación oficial
-* el sistema de ayuda
-* el sistema de skills
-* las políticas de gobernanza
-* las reglas de calidad del desarrollo
+- la arquitectura del framework
+- la documentación oficial
+- el sistema de prompts
+- el sistema de roles
+- las políticas de gobernanza
+- las reglas de calidad del desarrollo
 
 ---
 
@@ -18,20 +18,21 @@ Su objetivo es garantizar que cualquier agente respete:
 Antes de realizar cualquier tarea, el agente debe revisar los siguientes documentos:
 
 1. README.md
-2. docs/MVP.md
-3. docs/PRD.md
-4. docs/explanation/HELP_SYSTEM.md
-5. docs/skills/catalog.md
-6. docs/skills/policies.md
+2. docs/explanation/AI_PROJECT_FOUNDATION.md
+3. docs/explanation/MVP.md
+4. docs/explanation/PRD.md
+5. docs/explanation/HELP_SYSTEM.md
+6. docs/skills/catalog.md
+7. docs/skills/policies.md
 
 Estos documentos definen:
 
-* propósito del proyecto
-* alcance funcional
-* arquitectura
-* sistema de ayuda
-* habilidades disponibles
-* políticas de calidad
+- propósito del framework
+- alcance funcional
+- arquitectura conceptual
+- sistema de ayuda
+- habilidades disponibles
+- políticas de calidad
 
 ---
 
@@ -39,50 +40,44 @@ Estos documentos definen:
 
 El agente debe seguir estos principios:
 
-1. No implementar funcionalidades fuera del alcance definido en el MVP.
+1. No implementar funcionalidades fuera del alcance definido.
 2. No modificar arquitectura sin justificación explícita.
 3. No crear features sin documentación asociada.
-4. Mantener coherencia con la arquitectura del repositorio.
+4. Mantener coherencia con la arquitectura del framework.
 5. Priorizar claridad, simplicidad y mantenibilidad.
 
 ---
 
-# 3. Arquitectura del Proyecto
+# 3. Arquitectura del Framework
 
-El proyecto sigue principios de:
+Este repositorio define **estructura y gobernanza**, no aplicaciones productivas.
 
-* separación de responsabilidades
-* modularidad
-* documentación viva
-* diseño orientado a dominio
+Por lo tanto:
 
-Estructura principal:
+- no se debe agregar código de aplicación
+- no se deben incluir implementaciones específicas de negocio
+- el framework debe mantenerse genérico y reutilizable
 
-src/
-application/
-domain/
-infrastructure/
+Las aplicaciones reales se crean utilizando:
 
-El agente no debe romper esta separación.
+ai-project-template
 
 ---
 
-# 4. Sistema de Ayuda
+# 4. Sistema de Prompts
 
-El proyecto implementa un sistema de **ayuda viva**.
+Los prompts oficiales del framework se encuentran en:
 
-Reglas:
+prompts/
 
-* toda funcionalidad visible debe tener ayuda asociada
-* la ayuda debe estar accesible desde la interfaz
-* la documentación debe mantenerse en:
+Estructura:
 
-docs/tutorials/ui_help/
-docs/tutorials/dev_help/
+prompts/
+system/
+domain/
+guardrails/
 
-Definición completa:
-
-docs/explanation/HELP_SYSTEM.md
+Los agentes deben consultar estos prompts antes de generar código o respuestas.
 
 ---
 
@@ -94,110 +89,66 @@ docs/skills/catalog.md
 
 Estados posibles de una skill:
 
-* proposed
-* in_evaluation
-* curated
-* deprecated
+- proposed
+- in_evaluation
+- curated
+- deprecated
 
 Solo las skills **curadas** pueden usarse automáticamente.
 
-La evolución del sistema se define en:
+---
 
-docs/skills/roadmap.md
+# 6. Documentación Obligatoria
 
-Las reglas de calidad se encuentran en:
+Cada cambio debe incluir documentación correspondiente.
 
-docs/skills/policies.md
+La documentación puede incluir:
+
+- explicación técnica
+- referencia
+- tutorial
+- guía de usuario
+
+Una funcionalidad no se considera completa sin documentación.
 
 ---
 
-# 6. Sistema de Prompts
+# 7. Flujo de Trabajo del Agente
 
-Los prompts oficiales del proyecto se encuentran en:
-
-prompts/
-
-Estructura:
-
-prompts/
-system/
-domain/
-guardrails/
-
-Prioridad de uso:
-
-1. system prompts
-2. domain prompts
-3. guardrails
-
-Los agentes deben consultar estos prompts antes de generar código o respuestas.
-
----
-
-# 7. Fuentes de Skills Externas
-
-El proyecto puede utilizar habilidades provenientes de repositorios externos.
-
-Las fuentes autorizadas se registran en:
-
-docs/skills/external_sources.md
-
-Las skills externas deben:
-
-* evaluarse antes de usarse
-* adaptarse a la arquitectura del proyecto
-* no ejecutarse automáticamente sin revisión
-
----
-
-# 8. Documentación Obligatoria
-
-Cada nueva funcionalidad debe incluir:
-
-* código
-* documentación técnica
-* ayuda para usuario (si aplica)
-
-Una feature no se considera completa sin documentación.
-
----
-
-# 9. Flujo de Trabajo del Agente
-
-El flujo recomendado es:
+Flujo recomendado:
 
 1. Leer documentación relevante
 2. Analizar el problema
-3. Proponer solución en Markdown
+3. Proponer solución
 4. Evaluar riesgos
 5. Implementar cambios
 6. Actualizar documentación
 
 ---
 
-# 10. Seguridad
+# 8. Seguridad
 
 El agente nunca debe:
 
-* exponer API keys
-* incluir secretos en el repositorio
-* modificar configuraciones críticas sin aprobación
+- exponer API keys
+- incluir secretos en el repositorio
+- modificar configuraciones críticas sin aprobación humana
 
 ---
 
-# 11. Gobernanza Humana
+# 9. Gobernanza Humana
 
 Las siguientes decisiones requieren aprobación humana:
 
-* cambios de arquitectura
-* migraciones de base de datos
-* cambios en autenticación
-* despliegues productivos
+- cambios de arquitectura
+- cambios en el framework
+- incorporación de nuevas políticas
+- cambios en el sistema de agentes
 
 ---
 
-# 12. Objetivo del Sistema
+# 10. Objetivo del Sistema
 
-El objetivo del agente es contribuir a construir:
+El objetivo del agente es contribuir a construir un framework que permita desarrollar:
 
-software mantenible, documentado, seguro y alineado con el propósito del proyecto.
+software mantenible, documentado, seguro y colaborativo entre humanos e inteligencia artificial.

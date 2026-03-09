@@ -1,36 +1,63 @@
-Listado de rutas de carpetas para el volumen Datos
-El número de serie del volumen es 606C-0F44
-D:.
-|   .cursorrules.md
+AI-PROJECT-FOUNDATION
+|   .gitignore
 |   AGENTS.md
-|   antigravity.rules.md
+|   ARCHITECTURE.md
 |   CHANGELOG.md
+|   DECISIONS.md
 |   README.md
-|   _LEER!!!
+|   VERSION
+|   _LEER!!!.md
 |   _tree.txt
 |   
-+---.agent
-|   +---rules
-|   |       ui-style.md
++---.ai
+|   |   context.md
+|   |   index.md
+|   |   README.md
+|   |   
+|   +---guides
+|   |       create_project.md
 |   |       
-|   \---workflows
+|   \---knowledge
+|           index.md
+|           
++---.ai-pipelines
+|       feature_delivery.md
+|       
++---.ai-roles
+|       architect.md
+|       developer.md
+|       documentation.md
+|       product_manager.md
+|       reviewer.md
+|       
++---.ai-workflows
+|       feature-development.md
+|       project-initialization.md
+|       
 +---.antigravity
+|       rules.md
+|       
 +---docs
+|   |   GLOSSARY.md
 |   |   help_index.md
 |   |   
-|   +---agents
-|   |       antigravity.rules.md
-|   |       
 |   +---artifacts
+|   |       README.md
+|   |       
 |   +---assets
+|   |       README.md
+|   |       
 |   +---explanation
 |   |       AGENT_GOVERNANCE.md
+|   |       AI_PROJECT_FOUNDATION.md
+|   |       ECOSYSTEM.md
 |   |       HELP_SYSTEM.md
 |   |       MVP.md
 |   |       PRD.md
 |   |       
 |   +---reference
 |   |       CHECKLIST_INICIALIZACION_PROYECTOS_IA.md
+|   |       PROJECT_STRUCTURE.md
 |   |       RECOVERY_SOP.md
 |   |       
 |   +---skills
@@ -50,46 +77,25 @@ D:.
 |   |       PULL_REQUEST_TEMPLATE.md
 |   |       
 |   \---tutorials
+|       |   README.md
+|       |   
 |       +---dev_help
 |       |       form_ejemplo.md
 |       |       
 |       \---ui_help
 |               form_ejemplo.md
 |               
-+---prompts
-|   |   README.md
-|   |   
-|   +---domain
-|   |       domain_context.md
-|   |       
-|   +---guardrails
-|   |       prompt_injection.md
-|   |       
-|   \---system
-|           agent_behavior.md
-|           project_start.md
-|           
-+---src
-|   +---application
-|   |   \---use-cases
-|   +---domain
-|   |   |   AGENTS.md
-|   |   |   
-|   |   +---models
-|   |   \---services
-|   +---infrastructure
-|   |   |   AGENTS.md
-|   |   |   
-|   |   +---api
-|   |   +---db
-|   |   \---external
-|   \---modules
-+---supabase
-|   |   seed.sql
-|   |   
-|   \---migrations
-|           AGENTS.md
-|           
-\---test
-        TEST_STYLE.md
-        
+\---prompts
+    |   README.md
+    |   
+    +---domain
+    |       domain_context.md
+    |       
+    +---guardrails
+    |       prompt_injection.md
+    |       
+    \---system
+            agent_behavior.md
+            framework_behavior.md
+            project_start.md
+            
