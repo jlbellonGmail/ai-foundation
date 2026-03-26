@@ -1,12 +1,15 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
 name: AI Project Audit
 
 on:
   push:
     branches: ["main", "develop"]
   pull_request:
+
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-  
+
 jobs:
   audit:
     runs-on: ubuntu-latest
@@ -20,22 +23,28 @@ jobs:
         with:
           node-version: "20"
 
+      - name: Install dependencies (if needed)
+        run: |
+          if [ -f package.json ]; then
+            npm install
+          else
+            echo "No package.json found, skipping install"
+          fi
+
       - name: Debug info
         run: |
           echo "Node version:"
           node -v
           echo "NPM version:"
           npm -v
-
-      - name: Run AI Audit
-        run: |
-          echo "🔍 Running AI Audit..."
-
-          ROOT_DIR=$(pwd)
-          echo "📂 Current directory: $ROOT_DIR"
-
-            echo "📁 Listing .ai structure:"
+          echo "📂 Current directory:"
+          pwd
+          echo "📁 Listing .ai structure:"
           ls -R .ai || true
+
+      - name: Validate AI structure
+        run: |
+          ROOT_DIR=$(pwd)
 
           if [ ! -f "$ROOT_DIR/.ai/audit/audit-system.md" ]; then
             echo "❌ Missing audit-system.md"
@@ -52,7 +61,11 @@ jobs:
             exit 1
           fi
 
-          echo "✅ Core audit files present"  
+          echo "✅ Core audit files present"
+
+      - name: Run AI Audit (Punto B)
+        run: |
+          node scripts/ai-audit.js
 
       - name: Success
         run: echo "🎯 AI Audit Passed"
