@@ -183,6 +183,91 @@ Curada e integrada en el sistema de skills.
 
 ---
 
+# Product Discovery 
+
+## Categoría 
+
+Producto / Estrategia 
+
+## Origen 
+
+Continuous Discovery (Teresa Torres) / Inspired (Marty Cagan) 
+
+## Propósito 
+
+Validar problemas de negocio e identificar oportunidades antes del desarrollo. 
+
+## Cuándo utilizarla 
+
+Al definir el MVP o feature-sets mayores para reducir riesgo de valor. 
+
+## Cuándo no utilizarla 
+
+En correcciones de errores técnicos o mantenimiento de infraestructura.
+
+## Estado
+
+Curada e integrada.
+
+---
+
+# UX Research 
+
+## Categoría 
+
+Diseño / Producto
+
+## Origen 
+
+Nielsen Heuristics / Lean UX Audit 
+
+## Propósito 
+
+Identificar fricciones de usuario mediante auditorías de usabilidad. 
+
+## Cuándo utilizarla 
+
+Al diseñar flujos de usuario complejos o mejorar la retención.
+
+## Cuándo no utilizarla
+
+En procesos backend sin interfaz de usuario o lógica de servidor pura.
+
+## Estado 
+
+Curada e integrada.
+
+---
+
+# Software Architecture Patterns 
+
+## Categoría 
+
+Ingeniería 
+
+## Origen 
+
+Hexagonal Architecture / Clean Architecture 
+
+## Propósito 
+
+Garantizar la inmutabilidad de la lógica de negocio y el desacoplamiento técnico.
+
+## Cuándo utilizarla 
+
+Al definir la estructura de nuevos módulos, servicios o integraciones externas. 
+
+## Cuándo no utilizarla
+
+En scripts de automatización simples o prototipos de un solo archivo.
+
+## Estado
+
+Curada e integrada.
+
+---
+
+
 # Skills en Curación
 
 Las siguientes capacidades han sido identificadas como estratégicas
@@ -193,75 +278,12 @@ No deben utilizarse hasta completar su definición formal.
 
 ---
 
-# Product Discovery
-
-### Categoría
-Producto / Estrategia
-
-### Propósito
-
-Permitir que los agentes ayuden a:
-
-- validar problemas de negocio
-- identificar oportunidades de producto
-- estructurar discovery antes del desarrollo
-- definir hipótesis y experimentos
-
-### Estado
-
-Propuesta
-
----
-
-# UX Research
-
-### Categoría
-Diseño / Producto
-
-### Propósito
-
-Capacidad para ayudar a realizar:
-
-- análisis de experiencia de usuario
-- identificación de fricciones
-- validación de flujos de usuario
-- mejora de usabilidad
-
-### Estado
-
-Propuesta
-
----
-
-# Software Architecture Patterns
-
-### Categoría
-Ingeniería
-
-### Propósito
-
-Permitir que los agentes utilicen patrones arquitectónicos reconocidos
-para estructurar soluciones robustas.
-
-Ejemplos:
-
-- Hexagonal Architecture
-- Clean Architecture
-- Modular Monolith
-- Event Driven Architecture
-
-### Estado
-
-Propuesta
-
----
-
 # AI Prompt Engineering
 
-### Categoría
+## Categoría
 Ingeniería / IA
 
-### Propósito
+## Propósito
 
 Optimizar el uso de modelos de lenguaje mediante:
 
@@ -270,7 +292,7 @@ Optimizar el uso de modelos de lenguaje mediante:
 - control de contexto
 - evaluación de respuestas
 
-### Estado
+## Estado
 
 Propuesta
 
@@ -278,10 +300,10 @@ Propuesta
 
 # Growth Engineering
 
-### Categoría
+## Categoría
 Producto / Marketing
 
-### Propósito
+## Propósito
 
 Capacidad para optimizar productos digitales mediante:
 
@@ -290,7 +312,7 @@ Capacidad para optimizar productos digitales mediante:
 - optimización de conversión
 - análisis de funnels
 
-### Estado
+## Estado
 
 Propuesta
 

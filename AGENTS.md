@@ -195,7 +195,7 @@ El conocimiento incluye:
 
 - skills
 - prácticas de desarrollo
-- estándares
+- estándares (ver especialmente: [standards/naming-conventions.md])
 - patrones arquitectónicos
 
 ---

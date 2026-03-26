@@ -47,6 +47,9 @@ Skills activas actualmente:
 - **Superpowers**
 - **Frontend Design**
 - **Marketing Skills**
+- **Product Discovery**
+- **UX Research**
+- **Software Architecture Patterns**
 
 Estas skills ya han sido:
 
@@ -122,71 +125,6 @@ Estas skills permiten analizar métricas, embudos y optimizar resultados.
 # Próximas Skills Prioritarias
 
 Las siguientes skills se consideran prioritarias para la evolución del framework.
-
----
-
-## 1. Product Discovery
-
-Objetivo:
-
-Permitir que los agentes ayuden a validar ideas de producto antes del desarrollo.
-
-Frameworks candidatos:
-
-- Continuous Discovery (Teresa Torres)
-- Inspired / Marty Cagan
-- Lean Product Discovery
-
-Capacidades esperadas:
-
-- análisis de problemas de usuario
-- validación temprana de producto
-- diseño de hipótesis de negocio
-
-Estado:
-Investigación.
-
----
-
-## 2. UX Research
-
-Objetivo:
-
-Mejorar la capacidad del agente para analizar experiencia de usuario.
-
-Capacidades esperadas:
-
-- análisis de fricción
-- evaluación heurística
-- análisis de usabilidad
-- recomendaciones UX
-
-Estado:
-Investigación.
-
----
-
-## 3. Software Architecture Patterns
-
-Objetivo:
-
-Permitir que los agentes utilicen patrones arquitectónicos reconocidos.
-
-Ejemplos:
-
-- Hexagonal Architecture
-- Clean Architecture
-- Event Driven Architecture
-- Modular Monolith
-
-Capacidades esperadas:
-
-- análisis arquitectónico
-- recomendación de patrones
-- evaluación de escalabilidad
-
-Estado:
-Definición de framework.
 
 ---
 
