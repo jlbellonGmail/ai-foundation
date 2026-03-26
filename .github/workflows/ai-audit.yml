@@ -4,7 +4,9 @@ on:
   push:
     branches: ["main", "develop"]
   pull_request:
-
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  
 jobs:
   audit:
     runs-on: ubuntu-latest
@@ -29,22 +31,28 @@ jobs:
         run: |
           echo "🔍 Running AI Audit..."
 
-          if [ ! -f ".ai/audit/audit-system.md" ]; then
+          ROOT_DIR=$(pwd)
+          echo "📂 Current directory: $ROOT_DIR"
+
+            echo "📁 Listing .ai structure:"
+          ls -R .ai || true
+
+          if [ ! -f "$ROOT_DIR/.ai/audit/audit-system.md" ]; then
             echo "❌ Missing audit-system.md"
             exit 1
           fi
 
-          if [ ! -f ".ai/audit/audit-prompt.md" ]; then
+          if [ ! -f "$ROOT_DIR/.ai/audit/audit-prompt.md" ]; then
             echo "❌ Missing audit-prompt.md"
             exit 1
           fi
 
-          if [ ! -f ".ai/core/audit-agent.md" ]; then
+          if [ ! -f "$ROOT_DIR/.ai/core/audit-agent.md" ]; then
             echo "❌ Missing audit-agent.md"
             exit 1
           fi
 
-          echo "✅ Core audit files present"
+          echo "✅ Core audit files present"  
 
       - name: Success
         run: echo "🎯 AI Audit Passed"
