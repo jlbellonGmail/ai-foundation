@@ -43,7 +43,32 @@ _ai-project-foundation-output.txt
 
 
 # AI Audit generated artifacts
-ai-audit-comment.json
+ai-audit-history.json
+ai-audit-result.json
 ai-audit-report.md
+ai-audit-comment.json
+public/ai-audit-history.json
 public/ai-audit-result.json
+tsconfig.tsbuildinfo
 
+# Legacy / local analysis
+.source-legacy-analysis/
+audit-completo.ps1
+auditoria.txt
+
+# Local workspace files
+pnpm-workspace.yaml
+pnpm-workspace.yaml.bak
+
+# Experimental / not yet governed
+governance/
+testing/
+
+# Local script experiments
+scripts/_backup_ai-audit.js
+scripts/post-pr-comment.js
+scripts/test-models.js
+
+# Agent runtime / local tooling
+.antigravitycli/
+.repomix/
