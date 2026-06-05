@@ -22,6 +22,7 @@ yarn-error.log*
 # build
 dist
 build
+.next
 
 # coverage
 coverage
@@ -39,3 +40,10 @@ repomix-output.txt
 ai-project-foundation-output.txt
 _repomix-output.txt
 _ai-project-foundation-output.txt
+
+
+# AI Audit generated artifacts
+ai-audit-comment.json
+ai-audit-report.md
+public/ai-audit-result.json
+
