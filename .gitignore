@@ -57,7 +57,6 @@ audit-completo.ps1
 auditoria.txt
 
 # Local workspace files
-pnpm-workspace.yaml
 pnpm-workspace.yaml.bak
 
 # Experimental / not yet governed
