@@ -35,11 +35,11 @@ def bootstrap():
         "package.json": "project-name"
     }
     
-    for file_name, placeholder in mapping.items():
+    for file_name, replacement_token in mapping.items():
         file_path = os.path.join(target_path, file_name)
         if os.path.exists(file_path):
             with open(file_path, "r") as f:
-                content = f.read().replace(placeholder, name)
+                content = f.read().replace(replacement_token, name)
             with open(file_path, "w") as f:
                 f.write(content)
 
