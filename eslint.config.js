@@ -18,7 +18,8 @@ export default [
 
       "public/**",
 
-      ".source-legacy-analysis/**"
+      ".source-legacy-analysis/**",
+      "_deprecated/**"
     ],
   },
 
