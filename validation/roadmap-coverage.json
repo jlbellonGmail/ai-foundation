@@ -20,8 +20,11 @@
     "W6-T1": ["validation/roadmap-coverage.json", "scripts/validate-structure.mjs"],
     "W7-T1": ["README.md"],
     "W7-T3": ["docs/overview/ARCHITECTURE.md"],
-    "W8-T1": ["_deprecated/2026-06-11/README.md"],
+    "W8-T1": ["_deprecated/2026-06-11/README.md", "_deprecated/2026-06-11/legacy-inventory.md", "_deprecated/2026-06-11/legacy-inventory.contract.json", "scripts/validate-legacy-inventory.mjs", "docs/ENTERPRISE-10-10/ROADMAP_TO_FILES.md"],
     "W8-T4": ["_deprecated/2026-06-11/README.md"],
     "W8-T5": ["scripts/validate-structure.mjs"]
+  },
+  "taskStates": {
+    "W8-T1": "IMPLEMENTED"
   }
 }
