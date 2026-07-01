@@ -11,3 +11,7 @@ Current modules:
 
 The runtime is validated through TypeScript compilation and the structural checks
 in `scripts/validate-structure.mjs`.
+
+Runtime task execution is wired to H3 observability through
+`observability/runtime-wiring/runtime-observability.ts`. The default is local
+no-op and does not require a collector, endpoint or token.

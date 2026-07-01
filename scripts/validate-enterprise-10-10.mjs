@@ -48,8 +48,15 @@ function validateSecurityAudit(audit) {
 
 const observability = await readJson("observability/enterprise-10-10/observability-program.json");
 const securityAudit = await readJson("security/enterprise-10-10/security-audit-final.json");
+const runtimeObservability = await readJson("observability/runtime-wiring/runtime-observability.contract.json");
 
 validateObservability(observability);
 validateSecurityAudit(securityAudit);
+
+assert(runtimeObservability.task === "H3", "runtime observability wiring must map to H3");
+assert(runtimeObservability.runtimeDefault.mode === "noop", "runtime observability default mode must be noop");
+assert(runtimeObservability.runtimeDefault.requiresEndpoint === false, "runtime observability must not require endpoint by default");
+assert(runtimeObservability.bindings.enterpriseObservabilityRecords.includes("obs-001-request-success"), "runtime observability must bind request success");
+assert(runtimeObservability.bindings.enterpriseObservabilityRecords.includes("obs-002-tool-latency"), "runtime observability must bind tool latency");
 
 console.log("ENTERPRISE-10-10 ai-foundation validation PASS");
