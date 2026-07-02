@@ -3,12 +3,18 @@ import { DecisionTracker } from "./decision-tracker.js";
 import { SkillsRegistry } from "../evolution/skills-registry.js";
 import { SelfImprovement } from "../evolution/self-improvement.js";
 import { AutoActions } from "../evolution/auto-actions.js";
+import { createRuntimeObservability, RuntimeObservability } from "../../observability/runtime-wiring/runtime-observability.js";
 import fs from "fs";
 import path from "path";
 
 export class AIRuntime {
     private sessionManager = new SessionManager();
     private decisionTracker = new DecisionTracker();
+    private observability: RuntimeObservability;
+
+    constructor(observability: RuntimeObservability = createRuntimeObservability()) {
+        this.observability = observability;
+    }
 
     startSession(metadata: Record<string, any> = {}) {
         return this.sessionManager.start(metadata);
@@ -40,15 +46,26 @@ export class AIRuntime {
             // Esto es lo que genera los archivos decision-dec_...json
             const sessionId = this.sessionManager.getSession()?.id || "no-session";
 
-            return await this.decisionTracker.track({
-                sessionId,
-                agent,
-                input,
-                thought_trace: thought_trace || "Ejecución de tarea de dominio",
-                execute: async () => {
-                    return await execute();
+            return await this.observability.run(
+                {
+                    operationName: "runtime.agent_task",
+                    attributes: {
+                        "agent.name": String(agent || "unknown"),
+                        "runtime.session_id": sessionId
+                    }
+                },
+                async () => {
+                    return await this.decisionTracker.track({
+                        sessionId,
+                        agent,
+                        input,
+                        thought_trace: thought_trace || "Ejecución de tarea de dominio",
+                        execute: async () => {
+                            return await execute();
+                        }
+                    });
                 }
-            });
+            );
 
         } catch (error: any) {
             console.error("❌ Runtime error", {
