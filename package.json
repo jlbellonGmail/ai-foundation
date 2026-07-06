@@ -24,6 +24,7 @@
     "test": "echo \"No tests defined in ai-foundation\" && exit 0",
     "typecheck": "tsc --noEmit",
     "audit": "node scripts/ai-audit.js",
-    "validate:runtime-observability": "node observability/smoke-tests/validate-runtime-observability-wiring.mjs"
+    "validate:runtime-observability": "node observability/smoke-tests/validate-runtime-observability-wiring.mjs",
+    "validate:target-repo-security": "node scripts/validate-target-repo-security.mjs"
   }
 }
