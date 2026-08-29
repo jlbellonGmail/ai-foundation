@@ -9,6 +9,7 @@ on:
     branches: [ "main", "develop" ]
   schedule:
     - cron: '30 4 * * 1' # Cada lunes a las 04:30 UTC
+  workflow_dispatch:
 
 jobs:
   analyze:
